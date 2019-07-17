@@ -68,11 +68,10 @@ class MuseumTest < Minitest::Test
     @dmns.admit(@sally)
   #
   #   assert_equal {
-  #     @gems_and_minerals => [@bob]
-  #     @dead_sea_scrolls => [@bob, @sally]
-  #     @imax => []
-  #   }
-  #   , @dmns.patrons_by_exhibit_interest
+#   <Exhibit:0x00007fb202238618...> => [#<Patron:0x00007fb2011455b8...>],
+#   <Exhibit:0x00007fb202248748...> => [#<Patron:0x00007fb2011455b8...>, #<Patron:0x00007fb20227f8b0...>],
+#   <Exhibit:0x00007fb20225f8d0...> => []
+# }
     p @dmns.patrons_by_exhibit_interest
   end
 

@@ -31,14 +31,19 @@ class Museum
   end
 
   def patrons_by_exhibit_interest
-    tot_exs = []
+    tot_reco_exs = []
     tot_pats = []
-    ex = @exhibits.each { |exhibit| tot_exs << exhibit}
+    ex = recommended_exhibits.each { |exhibit| tot_reco_exs << exhibit}
     pats = @visitors.each { |visitor| tot_pats << visitor}
 
-    pat_by_ex = Hash.new
 
-    tot_exs.each do |exhibit, visitor|
-      hash[exhibit] = data[visitor]
+    tot_pats.map do |tot_pats|
+      pat_by_ex_hash[exhibit] = [pats]
+      #what I want to do is get each patron's desired exhibits and then somehow map that as the key and the visitor name as the value, but I don't know how. 
 
+
+      pat_by_ex_hash = Hash.new
+    end
+    pat_by_ex_hash
+  end
 end
