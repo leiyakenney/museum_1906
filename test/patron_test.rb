@@ -5,8 +5,12 @@ require './lib/patron'
 
 class PatronTest < Minitest::Test
 
-  def test_it_exists
+  def setup
+    @bob = Patron.new("Bob", 20)
+  end
 
-  end 
+  def test_it_exists
+    assert_instance_of Patron, @bob
+  end
 
 end
