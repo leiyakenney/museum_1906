@@ -4,6 +4,7 @@ class Museum
   def initialize(name)
     @name = name
     @exhibits = []
+    @visitors = []
   end
 
   def add_exhibit(exhibit)
@@ -19,4 +20,14 @@ class Museum
     end
     reco_exhibits
   end
+
+  def admit(patron)
+    @visitors << patron
+    @visitors
+  end
+
+  def patrons
+    @visitors
+  end
+
 end
