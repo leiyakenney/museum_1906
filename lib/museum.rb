@@ -30,4 +30,15 @@ class Museum
     @visitors
   end
 
+  def patrons_by_exhibit_interest
+    tot_exs = []
+    tot_pats = []
+    ex = @exhibits.each { |exhibit| tot_exs << exhibit}
+    pats = @visitors.each { |visitor| tot_pats << visitor}
+
+    pat_by_ex = Hash.new
+
+    tot_exs.each do |exhibit, visitor|
+      hash[exhibit] = data[visitor]
+
 end
